@@ -5,11 +5,61 @@ body {
   background-color: black;
   color: white; }
 
-.nav {
-  margin-top: 30px; }
+.navbar {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 0px 82px 0px 31px; }
 
-#brand {
-  font-size: 40px; }
+.brand {
+  font-family: serif;
+  color: #fff;
+  font-size: 44px;
+  font-style: italic; }
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; }
+
+.nav-links li {
+  margin-right: 20px; }
+
+.nav-links li:last-child {
+  margin-right: 0; }
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px; }
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; }
+  .navbar {
+    justify-content: flex-start; }
+  .brand {
+    margin-right: auto; }
+  .nav-links {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    padding: 10px 20px; }
+  .nav-links li {
+    margin: 10px 8px; }
+  .nav-links a {
+    font-size: 16px; }
+  .menu-toggle {
+    display: block;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer; } }
 
 .img {
   height: 480px;
@@ -17,9 +67,9 @@ body {
 
 .back {
   display: block;
-  margin-left: 143px;
+  margin-left: 460px;
   position: absolute;
-  width: 352px;
+  width: 370px;
   height: 440px;
   background-color: rgba(255, 255, 255, 0.418);
   transform: skewX(10deg); }
@@ -38,18 +88,27 @@ body {
   margin-top: 80px; }
 
 .herotext {
-  margin-left: 37px;
+  margin-left: 0px;
   display: block;
   font-size: 22px;
   font-family: fangsong;
-  margin-top: -13px;
+  margin-top: -221px;
   text-align: center; }
+
+.herotext {
+  display: block;
+  animation: show 1s ease-in-out 0.3s forwards; }
+
+@keyframes show {
+  0% {
+    filter: blur(5px);
+    transform: translateY(calc(-50% + 75px)); }
+  100% {
+    opacity: 1;
+    filter: blur(0); } }
 
 .head {
   font-size: 80px; }
-
-.hide-text {
-  display: none !important; }
 
 .button {
   text-decoration: none;
@@ -131,7 +190,7 @@ body {
   padding: 90px 0; }
 
 .first {
-  margin: 90px; }
+  margin: 50px; }
 
 .block-1 {
   font-family: fantasy;
